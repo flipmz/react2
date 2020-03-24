@@ -20,7 +20,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://127.0.0.1:8000/api/?format=json")
       .then(response => response.json())
       .then(data => this.setState({ robots: data }));
   }
